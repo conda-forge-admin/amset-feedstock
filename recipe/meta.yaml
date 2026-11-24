@@ -39,6 +39,7 @@ requirements:
     - sumo
     - tabulate
     - tqdm
+    - setuptools <80
 
 test:
   imports:
