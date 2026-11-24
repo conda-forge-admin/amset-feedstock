@@ -13,7 +13,7 @@ build:
   entry_points:
     - amset = amset.tools.cli:cli
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -35,7 +35,7 @@ requirements:
     - pymatgen >=2022.0.16
     - python >={{ python_min }}
     - scipy
-    - spglib
+    - spglib <2.7
     - sumo
     - tabulate
     - tqdm
